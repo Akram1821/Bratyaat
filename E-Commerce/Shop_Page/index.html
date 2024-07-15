@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Bratya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/E-Commerce/Shop_Page/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="navbar">
+            <div class="left">
+                <a class="logo-link" href="/E-Commerce/index.html"><img src="/E-Commerce/Home_Page/images/Logo.svg" alt="logo"></a>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="/E-Commerce/index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="/E-Commerce/Shop_Page/index.html">Shop</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="/E-Commerce/Contact_Page/index.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <a href="#home"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff; font-size: 20px;"></i></a>
+                <a href="#home"><i class="fa-solid fa-cart-shopping" style="color: #ffffff; font-size: 20px;"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- End Header -->
+    <br><br>
+    <!-- Start Deco -->
+    <div class="deco">
+        <div class="deco-text">
+            <h3><a href="/E-Commerce/index.html">Home</a> / Shop</h3>
+            <h1>Shop</h1>
+        </div>
+    </div>
+    <!-- End Deco -->
+    <br><br><br><br>
+    <!-- Start Products -->
+    <div class="sort-container">
+        <div class="sort-by">
+            <label for="sort-select">Sort by :</label>
+            <select id="sort-select">
+                <option value="default">Default</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+            </select>
+        </div>
+    </div>
+    <div class="products-container">
+        <div class="sidebar">
+            <h3>Filters</h3>
+            <div class="filter">
+                <h4>Category</h4>
+                <ul>
+                    <li><a href="#" class="filter-link" data-category="men">Men</a></li>
+                    <li><a href="#" class="filter-link" data-category="women">Women</a></li>
+                    <li><a href="#" class="filter-link" data-category="t-shirts">T-Shirt</a></li>
+                    <li><a href="#" class="filter-link" data-category="abaya">Abaya</a></li>
+                    <li><a href="#" class="filter-link" data-category="backpack">Backpack</a></li>
+                    <li><a href="#" class="filter-link" data-category="pants">Pants</a></li>
+                    <li><a href="#" class="filter-link" data-category="shoes">Shoes</a></li>
+                    <li><a href="#" class="filter-link" data-category="hoodie">Hoodie</a></li>
+                    <li><a href="#" class="filter-link" data-category="jacket">Jacket</a></li>
+                    <li><a href="#" class="filter-link" data-category="accessories">Accessories</a></li>
+                </ul>
+            </div>
+            <div class="filter">
+                <h4>Price Range</h4>
+                <div class="price-range">
+                    <div class="slider">
+                        <div class="track"></div>
+                        <div class="range"></div>
+                        <input type="range" min="1000" max="20000" value="1000" step="1000" id="price-min">
+                        <input type="range" min="1000" max="20000" value="20000" step="1000" id="price-max">
+                    </div>
+                    <div class="price-values">
+                        <span id="price-value-min">1000</span> - <span id="price-value-max">20000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <h4>Color</h4>
+                <div class="color-options">
+                    <div class="color-circle" style="background-color: black;" data-color="black"></div>
+                    <div class="color-circle" style="background-color: red;" data-color="red"></div>
+                    <div class="color-circle" style="background-color: blue;" data-color="blue"></div>
+                    <div class="color-circle" style="background-color: green;" data-color="green"></div>
+                    <div class="color-circle" style="background-color: yellow;" data-color="yellow"></div>
+                    <div class="color-circle" style="background-color: pink;" data-color="pink"></div>
+                    <div class="color-circle" style="background-color: brown;" data-color="pink"></div>
+                    <div class="color-circle" style="background-color: white" data-color="white"></div>
+                    <!-- Add more colors as needed -->
+                </div>
+            </div>
+            <div class="filter">
+                <h4>Size</h4>
+                <div class="size-options">
+                    <div class="size-circle" data-size="S">S</div>
+                    <div class="size-circle" data-size="M">M</div>
+                    <div class="size-circle" data-size="L">L</div>
+                    <div class="size-circle" data-size="XL">XL</div>
+                    <div class="size-circle" data-size="XXL">XXL</div>
+                </div>
+            </div>
+            <div class="filter">
+                <h4>Pointures</h4>
+                <div class="pointures-options">
+                    <div class="size-circle" data-shoe-size="38">38</div>
+                    <div class="size-circle" data-shoe-size="39">39</div>
+                    <div class="size-circle" data-shoe-size="40">40</div>
+                    <div class="size-circle" data-shoe-size="41">41</div>
+                    <div class="size-circle" data-shoe-size="42">42</div>
+                    <div class="size-circle" data-shoe-size="43">43</div>
+                    <div class="size-circle" data-shoe-size="44">44</div>
+                    <div class="size-circle" data-shoe-size="45">45</div>
+                </div>
+                <button class="reset-button">Reset Filters</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="product" data-category="men,t-shirts" data-colors="black,white,blue" data-sizes="S,M,L,XL" data-price="3900" data-order="1">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/Product one.webp" alt="T-Shirt Hollister"></a>
+                </div>
+                <div class="product-name">
+                    <a href=""><h3>T-Short Hollister</h3></a>
+                </div>
+                <div class="product-price">
+                    <!-- Réduction : <p style="font-family: Arial, Helvetica, sans-serif; color: red; font-size: 12px; font-weight: 600; text-decoration: line-through;">4900 Da</p> -->
+                    <h3>3900 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,t-shirts" data-colors="black,white,blue" data-sizes="S,M,L,XL" data-price="3900" data-order="2">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product two.webp" alt="T-Shirt Hollister"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>T-Short Hollister</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>3900 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,t-shirts" data-colors="black,green,yellow" data-sizes="S,M,L,XL,XXL" data-price="3900" data-order="3">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/import { originalName as alias } from 'module';.html"><img src="/E-Commerce/Shop_Page/images/product three.webp" alt="T-Shirt Hollister"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>T-Short Hollister</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>3900 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,t-shirts" data-colors="black,yellow,blue" data-sizes="S,M,L" data-price="3900" data-order="4">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product four.webp" alt="T-Shirt Hollister"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>T-Short Hollister</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>3900 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men, shoes" data-colors="black,white" data-shoe-sizes="38,39,40,41,42" data-price="11900" data-order="9">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product five.webp" alt="Balenciaga Sneakers"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>Balenciaga Sneakers</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>11900 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,shoes" data-colors="black,white" data-shoe-sizes="40,41,42" data-price="10500" data-order="10">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product six.webp" alt="Dolce & Gabbana Sneakers"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>Dolce & Gabbana Sneakers</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>10500 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,women,shoes" data-colors="black,white" data-shoe-sizes="43,44,45" data-price="7900" data-order="8">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product seven.webp" alt="New Balance Sneakers"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>New Balance Sneakers</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>7900 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,women,accessories,backpack" data-colors="black,red" data-price="1800" data-order="6">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product eight.webp" alt="Laptop Backpack"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>Laptop Backpack</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>1800 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="men,accessories,backpack" data-colors="black,blue" data-price="4800" data-order="11">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product nine.webp" alt="Laptop Backpack Dell"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>Laptop Backpack Dell</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>4800 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="women,abaya" data-colors="brown,black,yellow,green" data-price="7800" data-order="7">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product ten.webp" alt="Abaya Mirage"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>Abaya Mirage</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>7800 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-category="women,abaya" data-colors="pink,black" data-price="6800" data-order="5">
+                <div class="product-pic">
+                    <a href="/E-Commerce/Product_Page/index.html"><img src="/E-Commerce/Shop_Page/images/product eleven.webp" alt="Abaya Sultana"></a>
+                </div>
+                <div class="product-name">
+                    <a href="/E-Commerce/Product_Page/index.html"><h3>Abaya Sultana</h3></a>
+                </div>
+                <div class="product-price">
+                    <h3>6800 Da</h3>
+                </div>
+            </div>
+            <div class="product" data-order="1000"></div> <!-- solution for the gape caused by wrap in products -->
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+    <!-- End Products -->
+    <br><br><br><br><br>
+    <!-- Start Footer -->
+    <div class="container">
+        <div class="footer">
+            <div class="footer-logo">
+                <a href="/E-Commerce/index.html"><img src="/E-Commerce/Home_Page/images/Logo.svg" alt="Logo"></a>
+            </div>
+            <div class="policies">
+                <h3>Policies</h3>
+                <div class="links">
+                    <a href="">Returns</a>
+                    <a href="">Payment Terms</a>
+                    <a href="">Delivery Terms</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms Of Use</a>
+                </div>
+            </div>
+            <div class="informations">
+                <h3>Informations</h3>
+                <div class="links">
+                    <a href="">About Us</a>
+                    <a href="">Careers</a>
+                    <a href="">News & Events</a>
+                    <a href="">FAQ</a>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <div class="contact-links">
+                    <h3>Rue Saidani Djilali, Ouled Hedadj</h3>
+                    <h3>(+213) 549-02-65-92</h3>
+                    <h3>bratyastore@gmail.com</h3>
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100069860021560"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/hanouti__dz/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <script src="/E-Commerce/Shop_Page/script.js"></script>
+</body>
+</html>

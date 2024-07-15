@@ -1,0 +1,815 @@
+/* Start Global Rules */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+
+/* --------------------------- */
+
+/* Start Header */
+.header {
+    background-color: #e1978d;
+    /* background-color: #ed6755; */
+    width: 1170px;
+    margin: 0 auto;
+    height: 607px;
+}
+
+.circles {
+    width: 1170px;
+    height: 607px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.circle-one, .circle-two {
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 600px;
+    height: 600px;
+    top: -220px;
+    left: -120px;
+}
+
+.circle-two {
+    width: 500px;
+    height: 500px;
+    top: 370px;
+    left: 800px;
+    z-index: 1;
+}
+
+.model {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -500px;
+    left: 200px;
+    scale: 0.8;
+    z-index: 0;
+}
+.smooth-return {
+    transition: transform 0.5s ease-out; /* Smooth transition for return */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 450px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 50px;
+}
+
+.navbar .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.navbar img {
+    z-index: 2;
+    margin-left: 20px;
+}
+
+.navbar .logo-link:hover {
+    text-decoration: none;
+    /* Autres styles de survol à annuler si nécessaire */
+}
+
+.navbar .logo-link:hover::after {
+    width: 0; /* Par exemple, annule la largeur de ::after */
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    width: 100%;
+}
+
+.navbar ul li {
+    text-align: center;
+    height: fit-content;
+    width: 100px;
+    z-index: 2;
+}
+
+.navbar a {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: rgb(212, 70, 70);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    /* transform: translateX(-50%); */
+}
+
+.navbar a:hover::after {
+    width: 70%;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    left: 195px;
+    top: 200px;
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 25px;
+    font-weight: 10;
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.text h2 {
+    font-size: 100px;
+    z-index: 2;
+    margin-bottom: 45px;
+    margin-top: -20px;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: bolder;
+}
+
+.text a {
+    text-decoration: none;
+    width: 200px;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px ;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.8s, color 0.8s, border-color 0.8s;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.text a:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+/* End Header */
+
+/* --------------------------- */
+
+/* Start Categories */
+
+.categories {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.categories .left {
+    width: 450px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.categories .left .man {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.categories .left .man .pic {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.categories .left .man .pic img {
+    object-fit: cover;
+    position: absolute;
+    top: -15%;
+    left: -15.5%;
+    scale: 0.8;
+    transition: transform 0.7s ease;
+}
+
+.categories .left .man:hover .pic img {
+    transform: scale(1.1);
+}
+
+.categories .left .man .cat-name {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the right */
+}
+
+.categories .left .man .cat-name h3 {
+    transform: rotate(-90deg);
+    color: black;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 186px;
+    margin-top: 74px;
+}
+
+.categories .left .accessories {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.categories .left .accessories .pic {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.categories .left .accessories .pic img {
+    object-fit: cover;
+    position: absolute;
+    top: -22%;
+    left: -14%;
+    scale: 0.8;
+    transition: transform 0.7s ease;
+}
+
+.categories .left .accessories:hover .pic img {
+    transform: scale(1.1);
+}
+
+.categories .left .accessories .cat-name {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the right */
+}
+
+.categories .left .accessories .cat-name h3 {
+    transform: rotate(-90deg);
+    color: black;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 186px;
+    margin-top: 55px;
+}
+
+.categories .center {
+    width: 190px;
+    height: 600px;
+    position: relative;
+}
+
+.categories .center img {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    scale: 0.9;
+}
+
+
+.categories .right {
+    width: 450px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.categories .right .shoes {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.categories .right .shoes .pic {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.categories .right .shoes .pic img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: -316%;
+    left: -132%;
+    scale: 0.28;
+    transition: transform 0.7s ease;
+}
+
+.categories .right .shoes:hover .pic img {
+    transform: scale(1.1);
+}
+
+.categories .right .shoes .cat-name {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the right */
+}
+
+.categories .right .shoes .cat-name h3 {
+    transform: rotate(-90deg);
+    color: black;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 186px;
+    margin-top: 47px;
+}
+
+.categories .right .woman {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.categories .right .woman .pic {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.categories .right .woman .pic img {
+    object-fit: cover;
+    /* object-position: center; */
+    position: absolute;
+    top: -80%;
+    left: -70%;
+    scale: 0.5;
+    transition: transform 0.7s ease;
+}
+
+.categories .right .woman:hover .pic img {
+    transform: scale(1.1);
+}
+
+.categories .right .woman .cat-name {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the right */
+}
+
+.categories .right .woman .cat-name h3 {
+    transform: rotate(-90deg);
+    color: black;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 231px;
+    margin-top: 95px;
+}
+
+/* End Categories */
+
+/* --------------------------- */
+
+/* Start New Arrivals */
+
+.new-arrivals {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.new-arrivals .arrivals {
+    width: 4.1%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the right */
+}
+
+.new-arrivals .arrivals h3 {
+    transform: rotate(-90deg);
+    color: black;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 180px;
+    margin-top: -128px;
+}
+
+.product-one, .product-two, .product-three, .product-four {
+    width: 260px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.product-pic {
+    overflow: hidden;
+}
+
+.product-pic img {
+    width: 260px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-pic:hover img {
+    transform: scale(1.1);
+}
+
+.product-name a {
+    text-decoration: none;
+}
+
+.product-name a h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.product-name a:hover h3 {
+    color: #ed6755;
+}
+
+.product-price h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* End Nex Arrivals */
+
+/* --------------------------- */
+
+/* Start Badges*/
+
+.badges {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shipping, .support, .quality {
+    border-right: 1px solid #abb8c3;
+}
+
+.shipping, .support, .quality , .cod {
+    width: 24%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    gap: px;
+}
+
+.badges h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+/* End Badges*/
+
+/* --------------------------- */
+
+/* Start Best Sellers */
+
+.best-sellers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.best-sellers .sellers {
+    width: 4.1%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: flex-start; /* Align to the right */
+}
+
+.best-sellers .sellers h3 {
+    transform: rotate(-90deg);
+    color: black;
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    width: 180px;
+    margin-top: -150px;
+}
+
+.product-one, .product-two, .product-three, .product-four {
+    width: 260px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.product-pic {
+    overflow: hidden;
+}
+
+.product-pic img {
+    width: 260px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-pic:hover img {
+    transform: scale(1.1);
+}
+
+.product-name a {
+    text-decoration: none;
+}
+
+.product-name a h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.product-name a:hover h3 {
+    color: #ed6755;
+}
+
+.product-price h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* End Best Sellers */
+
+/* --------------------------- */
+
+/* Start Newsletter */
+
+.newsletter {
+    margin: 0 auto;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newsletter h1 {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #161616;
+}
+
+.newsletter p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #161616;
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #000; /* Bordure inférieure noire */
+    padding: 5px 0;
+    width: 700px;
+}
+
+.email-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 16px;
+}
+
+.email-input::placeholder {
+    color: #ccc;
+}
+
+.subscribe-button {
+    border: none;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #ed6755;
+}
+
+/* End Newsletter */
+
+/* --------------------------- */
+
+/* Start Footer */
+
+.footer {
+    background-color: #161616;
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.policies, .informations, .footer-contact {
+    margin-top: 70px;
+}
+
+.footer-logo {
+    margin-top: 53px;
+}
+
+.policies, .informations, .footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 13px;
+    font-family: "Poppins", sans-serif;
+}
+
+.footer-contact .contact-links h3 {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 350;
+}
+
+.policies a, .informations a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.policies h3, .informations h3, .footer-contact > h3 {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.social {
+    display: flex;
+    width: 100px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.social a i{
+    transition: 0.3s ease;
+    color: #999999; 
+    font-size: 20px
+}
+
+.policies a:hover, .informations a:hover {
+    color: #ed6755;
+}
+
+.social a i:hover {
+    color: #ed6755;
+}
+
+/* End Footer */
