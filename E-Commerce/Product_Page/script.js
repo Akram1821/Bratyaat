@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const quantité = document.getElementById('quantity').value;
         const nom_de_produit = document.querySelector('.order .name').textContent.trim();
         const couleur = document.querySelector('.color-circle.selected').getAttribute('data-color');
-        const taille = document.getElementById('product-size').innerText;
+        const taille = document.querySelector('.size-circle.selected').getAttribute('data-size');
         const prix_de_produit = document.querySelector('.product-price .price').textContent.trim();
         const prix_total = parseInt(price) * parseInt(quantity);
         const { data, error } = await supabase
