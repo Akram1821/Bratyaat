@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const couleur = document.querySelector('.color-circle.selected').getAttribute('data-color');
         const taille = document.querySelector('.size-circle.selected').getAttribute('data-size');
         const prix_de_produit = document.querySelector('.product-price .price').textContent.trim();
-        const prix_total = parseInt(price) * parseInt(quantity);
+        const prix_total = parseInt(prix_de_produit) * parseInt(quantité);
         const { data, error } = await supabase
             .from('Orders')
             .insert([
